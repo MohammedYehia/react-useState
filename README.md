@@ -141,6 +141,8 @@ const incrementCounterTwice = () => {
 };
 ```
 
+---
+
 Now practice time
 
 ***Excercise 1***
@@ -148,6 +150,8 @@ Create a counter with:
 1. increment button
 2. decrement button
 3. reset button
+
+---
 
 ***Excercise 2***
 Create a palette color:
@@ -160,7 +164,7 @@ Create a palette color:
         <div style={{backgroundColor: color}}>
     ```
 
-
+---
 
 ***Excercise 3***
 Create a todo app which includes:
@@ -173,6 +177,9 @@ Create a todo app which includes:
   description: "..."
 }
 ```
+
+---
+
 ***Excercise 4***
 Create a sign up `form` which contains:
 1. email input
