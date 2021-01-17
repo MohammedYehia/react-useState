@@ -146,6 +146,7 @@ const incrementCounterTwice = () => {
 Now practice time
 
 ***Excercise 1***
+
 Create a counter with: 
 1. increment button
 2. decrement button
@@ -154,6 +155,7 @@ Create a counter with:
 ---
 
 ***Excercise 2***
+
 Create a palette color:
 1. create an array with a group of colors.
 2. loop through this array and create a button for each color.
@@ -167,6 +169,7 @@ Create a palette color:
 ---
 
 ***Excercise 3***
+
 Create a todo app which includes:
 1. add a todo.
 2. delete a todo.
@@ -181,6 +184,7 @@ Create a todo app which includes:
 ---
 
 ***Excercise 4***
+
 Create a sign up `form` which contains:
 1. email input
 1. password input
