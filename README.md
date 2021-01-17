@@ -19,7 +19,7 @@ This probably the most built-in hooks you are going to use. This hook provides a
 
 #### How to use useState?
 
-```javascript=
+```js
 const [value, setValue] = React.useState(initialValue);
 //or
 const value = React.useState(initialValue)[0];
@@ -28,7 +28,7 @@ const setValue = React.useState(initialValue)[1];
 
 **Example:** 
 
-```javascript=
+```js
 function Counter () {
   const [count, setCount] = React.useState(0);
 
@@ -49,7 +49,7 @@ function Counter () {
 The **`Initial Value`** can be any type of value even a function but why would I use a function as the initial value?
 Let's imagine that our initial value depends on calling another function which will do some heavy calculation like the following:
 
-```javascript=
+```js
 function doHeavyCalc () {
   //some heavy calculation
 }
@@ -62,7 +62,7 @@ function App() {
 ##### lazy state initialization
 Now because of the way the functions work the `doHeavyCalc` will get invoked on each render, this will have some bad performance effects on our component, React provide a way to avoid this(lazy state initialization) by passing a function as an initial value which will be called only once during the initial render of the Component.
 
-```javascript=
+```js
 // notice the function that will return the result
 // of the doHeavyCalc function
 const [result, setResult] = React.useState( ()=> doHeavyCalc());
@@ -73,7 +73,7 @@ Using this way React will know that we want to run this function only once.
 **`The update function`** this will replace the current value so be careful when using any type of object as your initial value as calling the update function will remove the current value and replace it with the new one.
 Let's take an example:
 
-```javascript=
+```js
 function Counter() {
   const [data, setData] = React.useState({
     count: 0,
@@ -101,12 +101,12 @@ function Counter() {
 ```
 
 Now if you clicked the button the userName will be removed so to solve this you can split the state in this way
-```javascript=
+```js
 const [count, setCount] = React.useState(0);
 const [userName, setUserName] = React.useState("User");
 ```
 or if you want to keep it as an Object then you have to copy the the old data by using `Object.assign(target, source)` or the `...spread operator` or wahtever way you prefer
-```javascript=
+```js
 setData({
   ...data,
   count: data.count + 1,
@@ -115,7 +115,7 @@ setData({
 
 Also with updater function you will have access to the **old value** let's assume that there are two places that update the state based on its previous value, les's see this with our example
 
-```javascript=
+```js
 const incrementCounterTwice = () => {
   setCount(count + 1);
   /*
@@ -128,7 +128,7 @@ const incrementCounterTwice = () => {
 
 when you click on the function the counter will only increase by one because React for performance reason will dispatch multiple updates together and the order won't be guaranteed so if you rely on the old state you can write it in this way by passing a function that will contain the previous value
 
-```javascript=
+```js
 const incrementCounterTwice = () => {
   //this way we will be sure to update
   //based on the latest value
@@ -155,7 +155,8 @@ Create a palette color:
 2. loop through this array and create a button for each color.
 3. clicking the button will change the state color of the page
     - you can add the style directly to the div 
-    ```jsx=
+    
+    ```js
         <div style={{backgroundColor: color}}>
     ```
 
@@ -165,7 +166,7 @@ Create a palette color:
 Create a todo app which includes:
 1. add a todo.
 2. delete a todo.
-```javascript=
+```js
 //todo shape
 {
   id: 1,
@@ -182,6 +183,7 @@ Create a sign up `form` which contains:
 - the user should be able to see an error when the two passwords are not matched.
 - if everything is good then the user should see his submitted data under the form with a delete button.
 - The user should be able to use the delete button to delete his data
+
 **Hint**: check thess resources to learn how to get values from inputs and forms:
 https://reactjs.org/docs/handling-events.html
 https://reactjs.org/docs/events.html
