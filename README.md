@@ -61,7 +61,7 @@ function App() {
 }
 ```
 ##### lazy state initialization
-Now because of the way the functions work the `doHeavyCalc` will get invoked on each render, this will have some bad performance effects on our component, React provide a way to avoid this(lazy state initialization) by passing a function as an initial value which will be called only once during the initial render of the Component.
+Now because of the way the functions work the `doHeavyCalc` will get invoked on each render, this will have some bad performance effects on our component, React provide a way to avoid this with (lazy state initialization) by passing a function as an initial value which will be called only once during the initial render of the Component.
 
 ```js
 // notice the function that will return the result
