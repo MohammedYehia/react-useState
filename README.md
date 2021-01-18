@@ -68,7 +68,7 @@ Now because of the way the functions work the `doHeavyCalc` will get invoked on 
 // of the doHeavyCalc function
 const [result, setResult] = React.useState( ()=> doHeavyCalc());
 ```
-
+or if you are dealing with one of the browser API such as the localstorage where you are getting the initial value from the local storage so this will call the storage everytime the component run.
 Using this way React will know that we want to run this function only once.
 
 **`The update function`** this will replace the current value so be careful when using any type of object as your initial value as calling the update function will remove the current value and replace it with the new one.
