@@ -22,8 +22,9 @@ This probably the most built-in hooks you are going to use. This hook provides a
 ```js
 const [value, setValue] = React.useState(initialValue);
 //or
-const value = React.useState(initialValue)[0];
-const setValue = React.useState(initialValue)[1];
+const state = React.useState(initialValue);
+const value = state[0];
+const setValue = state[1];
 ```
 
 **Example:** 
